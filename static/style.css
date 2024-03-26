@@ -69,6 +69,9 @@ body{
 
 }
 
+/* .contact-info-links{
+    font-size: 1.2rem;
+} */
 .career{
     font-size: 1.7rem;
     text-transform: uppercase;
@@ -87,7 +90,7 @@ body{
 }  
 
 .contact-info ul{
-    padding: 1rem 2rem;
+    padding: 1rem 1.5rem;
     
     list-style: none;
 }
@@ -96,7 +99,7 @@ body{
     font-size:1.2rem;
 }
 .contact-info li i{
-    padding-right:1rem;
+    padding-right:0.8rem;
     color: #6895D2;
 }
 
