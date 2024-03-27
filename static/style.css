@@ -2,6 +2,7 @@
     margin:0;
     padding:0;
     color:F1B4BB;
+    background-color:#334257;
 }
 ul >li{
     list-style: none;
@@ -9,7 +10,7 @@ ul >li{
    
  
 body{
-    background-color:#FDF0F0;
+    background-color:#334257;
     color:#F1B4BB;
 
     font-family: "Roboto", sans-serif;
@@ -25,6 +26,19 @@ body{
   
     /* grid-template-rows:repeat(10,1fr); */
 
+}
+
+/* .title{
+    min-height:10vh;
+    width:91%;
+    text-align: center;
+    padding:15px;
+    margin-left:54.091px;
+    font-size: 1.5rem;;
+} */
+
+.nav-link{
+    color:#F2F4F6;
 }
 
 .left-section{
@@ -69,9 +83,11 @@ body{
 
 }
 
-/* .contact-info-links{
-    font-size: 1.2rem;
-} */
+.contact-info-links{
+    color: #e5ebef;
+    text-decoration: none ;
+}
+
 .career{
     font-size: 1.7rem;
     text-transform: uppercase;
@@ -127,28 +143,34 @@ body{
     background-color:orange;
 }
 .python-progress{
-    width:70%;
+    width:50%;
 }
 .web-scrapting-progress{
-    width:80%
+    width:50%
 }
 .flask-progress{
-    width:70%;
+    width:50%;
+}
+.pandas-progress{
+    width:50%
+}
+.matplotlib-progress{
+    width:50%;
 }
 .django-progress{
-    width:80%
-}
-.db-progress{
-    width:70%;
+    width:20%;
 }
 .c-progress{
-    width:80%
+    width:50%
 }
 .html-progress{
-    width:70%;
+    width:60%;
 }
 .github-progress{
-    width:80%
+    width:70%
+}
+.aws-progress{
+    width:50%
 }
 
 /* reference */
@@ -274,3 +296,11 @@ body{
     }
 }
 
+/* Set the size of the div element that contains the map */
+#map {
+    height: 300px; /* The height is 400 pixels */
+    width: 80%; /* The width is the width of the web page */
+}
+.navbar{
+    background-color: #124076;
+}

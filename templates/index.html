@@ -14,7 +14,7 @@
                     <img src="{{url_for('static', filename='/images/yeyul.PNG')}}" alt="applicant-photo">
                 </div>
                 <h2 class="name">Yeyul Choi</h2>
-                <p class="career">Python Developer</p>
+                <p class="career"> Python Developer</p>
             </div>
             <div class="contact-info">
                 <h3 class="main-title">CONTACT INFO</h3>
@@ -64,7 +64,7 @@
                     </li>
                     <li>
                         <i class="fa-solid fa-house"></i>
-                        53 Willesden RdNorth York, ON M2H 1V5
+                        <i><a href="{{mykey}}">{{myplace}}</a></i>
                     </li>
                 </ul>
             </div>
@@ -98,7 +98,7 @@
                     <li>
                         <p class="skill-title">Pandas</p>
                         <div class="progress-bar">
-                            <div class="progress  django-progress"></div>
+                            <div class="progress  pandas-progress"></div>
                         </div>
                     </li>
                 </ul>
@@ -106,7 +106,15 @@
                     <li>
                         <p class="skill-title">Matplotlib</p>
                         <div class="progress-bar">
-                            <div class="progress  db-progress"></div>
+                            <div class="progress  matplotlib-progress"></div>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p class="skill-title">Django</p>
+                        <div class="progress-bar">
+                            <div class="progress  django-progress"></div>
                         </div>
                     </li>
                 </ul>
@@ -131,6 +139,14 @@
                         <p class="skill-title">Github</p>
                         <div class="progress-bar">
                             <div class="progress  github-progress"></div>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <p class="skill-title">AWS</p>
+                        <div class="progress-bar">
+                            <div class="progress  aws-progress"></div>
                         </div>
                     </li>
                 </ul>
@@ -178,11 +194,8 @@
                             yeyulchoi@outlook.com
                         </li>
                     </ul>
-                </div>
-                                    
-                
+                </div>                        
             </div>
-            
         </div>
        
         <div class="reference">
@@ -202,8 +215,6 @@
                     high-quality code and collaborating effectively within a team setting. Ready to leverage my knowledge 
                     and enthusiasm to drive impactful solutions and gain valuable real-world experience in the field of 
                     software development.
-
-
                 </p>
             </section>
             <section class="education sect">
@@ -229,9 +240,7 @@
                 <h2 class="right-title">Portfolio</h2>
                 <div class="timeline">
                     <div class="left-tl-content">
-                        <h5 class="tl-title">Flask Blog</h5>
-                        <small>Created following tutorials on YouTube. <br>
-                            Copyright 2018 Corey Schafer</small>
+                        <h5 class="tl-title"><a href="http://flaskapp-blog-env.eba-j5x2ejkf.ca-central-1.elasticbeanstalk.com/">Flask Blog</a></h5>
                     </div>
                     <div class="right-tl-content">
                         <div class="tl-content">
@@ -354,8 +363,8 @@
 </main>
 </div>
 {% endblock %}
-</body>
-</html>
+<!-- </body>
+</html> -->
 
 
 
