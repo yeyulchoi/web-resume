@@ -1,11 +1,15 @@
-from flask import Flask, abort, render_template, request, redirect, url_for, flash
-import smtplib
-from flask_mail import Mail, Message  
+from flask import Flask, abort, render_template, request, redirect, url_for, flash, send_file, jsonify
 import os
+from werkzeug.utils import secure_filename
+import smtplib
 import secrets
+from flask_wtf import FlaskForm
+from flask_mail import Mail, Message
 
 
-app = Flask(__name__)
+application = Flask(__name__)
+
+
 # <<config for email notification>>
 # app.config['MAIL_SERVER']='smtp.gmail.com'
 # app.config['MAIL_PORT']=465
@@ -15,9 +19,9 @@ app = Flask(__name__)
 # app.config['MAIL_PASSWORD']='crlr kkkp wkbx xbpw'  #os.environ.get('FLASK_MAIL_USER_PASSWORD')
 # mail = Mail(app)
 # app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///flaskaws.db'
-app.config['SQLALCHEMY_DATABASE_URI']='mysql://root:''@localhost/flask_aws2'
-app.config['SQLALCHEMY_TRACK_MODIFICATION']=False
-app.config['SECRET_KEY']=secrets.token_hex(16)
+application.config['SQLALCHEMY_DATABASE_URI']='mysql://root:''@localhost/flask_aws2'
+application.config['SQLALCHEMY_TRACK_MODIFICATION']=False
+application.config['SECRET_KEY']=secrets.token_hex(16)
 
 
 class Location:
@@ -27,10 +31,10 @@ class Location:
         self.lat =lat
         self.lng =lng
 
-loc_obj = Location('house','53 Wilresden',43.793573115460475, -79.36569236094664)
+loc_obj = Location('house','53 Willesden Rd, Toronto, ON M2H 1V5',43.793573115460475, -79.36569236094664)
 
 
-@app.route('/', methods=['GET','POST'])
+@application.route('/', methods=['GET','POST'])
 def home():
     # if request.method =='POST':
     #     msg =Message(
@@ -42,15 +46,19 @@ def home():
     #     redirect('index.html')
     return render_template('index.html',mykey=loc_obj.key, myplace=loc_obj.addr)
 
-@app.route('/cover')
+@application.route('/cover')
 def cover_ltr():
     return render_template('coverltr.html')
 
-@app.route('/<loc_key>')
+@application.route('/<loc_key>')
 def show_place(loc_key):
     return render_template('map.html', myplace_two =loc_obj.addr,latitude=loc_obj.lat, longitude=loc_obj.lng)
 
+@application.route('/download')
+def download():
+    path = 'files/resume.pdf'
+    return send_file(path, as_attachment=True)
 
 if __name__ =='__main__':
-    with app.app_context():
-         app.run(debug=True)
+    with application.app_context():
+         application.run(debug=True)
