@@ -10,11 +10,34 @@
     <section class="left-section">
         <div class="left-content">
             <div class="profile">
-                <div class="image">
+                <div class="image">                    
                     <img src="{{url_for('static', filename='/images/yeyul.PNG')}}" alt="applicant-photo">
-                </div>
-                <h2 class="name">Yeyul Choi</h2>
-                
+                </div>   
+               
+                <!-- modal -->
+                 <div class="modal fade" tabindex="-1" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Email Notification</h5>
+                             <button type="button" class="btn-close" data-bs-toggle="modal" aria-label="Close"  ></button> 
+                        </div>
+                        <div class="modal-body">
+                            <p>Your visit to the web resume has been notified to Yeyul.</p>
+                        </div>
+                        <!-- <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>                        
+                        </div> -->
+                        </div>
+                    </div>  
+                </div>                 
+                 
+                <form action="" method="POST">    
+                    <h2 class="name">
+                        <button type="submit button" class="name-two  " data-bs-toggle="modal" data-bs-target="#myModal">Yeyul Choi</button>
+                    </h2>
+                </form>               
+                               
                 <p class="career"> <i class="fa-brands fa-python symbol" ></i>  Entry Level<br>Python Developer</p>
             </div>
             <div class="contact-info">
@@ -132,7 +155,7 @@
                 <h3 class="main-title">Reference</h3>
                 <div class="referee">
                     <h6 class="sub-title">Gaurav Sood</h6>
-                    <p class="sub-para">Senior Cyber Security Incident Commander Lead</p>
+                    <p class="sub-para">Senior Cyber Security Incident Commander Lead   |   BELL</p>
                     <ul>
                         <li>
                             <i class="fa-solid fa-phone"></i>
@@ -151,10 +174,10 @@
         <div class="right-main-content">
             <section class="summary sect">
                 <h2 class="right-title">Summary</h2>
-                <p class="para">                                   
-                    A diligent and enthusiastic entry-level Python developer with a diploma in Computer Science seeking an internship opportunity to apply and enhance 
-                    Python programming skills in a professional environment. Eager to contribute to innovative projects, collaborate with experienced developers, 
-                    and gain practical experience in software development while continuously learning and growing within a dynamic team.
+                <p class="para">
+                    A diligent and enthusiastic entry-level Python developer with a Software Engineering Technician diploma, adept at self-learning and 
+                    thriving in immersive environments. Passionate about problem-solving, I actively seek solutions from multiple perspectives and collaborate 
+                    with team members to achieve goals effectively. Eager to apply and enhance Python programming skills in a professional setting through an internship opportunity.
                 </p>
             </section>
             <section class="education sect">
@@ -197,21 +220,36 @@
                 <h2 class="right-title">Portfolio</h2>
                     <div class="right-tl-content">
                         <div class="tl-content">
-                            <h5 class="tl-title-2"><a href="http://flask-blog-env.eba-nykcgmer.ca-central-1.elasticbeanstalk.com/" class="portfolio-head"><i class="fa-solid fa-check"></i>Flask Blog</a></h5>
+                            <h5 class="tl-title-2"><a href="http://flask-blog-env.eba-nykcgmer.ca-central-1.elasticbeanstalk.com/" class="portfolio-head"><i class="fa-solid fa-check"></i>Blog</a></h5>
                             <small class="para">
-                            This blog enables different users to create posts. Users can register and log in. In case they forget their credentials, 
-                            they can update their password by receiving a code via email. Users can only view posts from other users, but they can upload 
-                            profile pictures and view, update, or delete their own posts.
+                                <ul>
+                                    <span class="feature">flask </span>
+                                    <span class="feature">CRUD</span>
+                                    <span class="feature">user authentication</span>
+                                    <span class="feature">package structure</span>
+                                    <span class="feature">image file upload</span>                                    
+                                    <span class="feature">email and password reset</span>
+                                    <span class="feature">blue print and configuration</span>
+                                    <span class="feature">pagination</span>
+                                    <span class="feature">database with flask-SQLAlchemy</span>  
+                                    <span class="feature">use of AWS Elastic Beanstalk</span>                                 
+                                </ul>
                             </small>
-                            <h5 class="tl-title-2"><a href="http://book-crud-env.eba-7dpny9q2.us-east-1.elasticbeanstalk.com/" class="portfolio-head"><i class="fa-solid fa-check"> </i>Book CRUD</a></h5>
+                            <h5 class="tl-title-2"><a href="http://book-crud-env.eba-7dpny9q2.us-east-1.elasticbeanstalk.com/" class="portfolio-head"><i class="fa-solid fa-check"> </i>Book Management </a></h5>
                             <small class="para">
-                                A book management application that consists of four fundamental operations:
-                                Create, Read, Update, Delete.
+                                <ul>
+                                    <span class="feature">Flask</span>
+                                    <span class="feature">CRUD</span>
+                                    <span class="feature">package structure</span>
+                                    <span class="feature">database with flask-SQLAlchemy</span>                                                                             
+                                    <span class="feature">use of AWS Elastic Beanstalk</span>                              
+                                </ul>
                             </small>
                             <h5 class="tl-title-2"><a href="https://yeyulchoi-todo-webapp-web-mjde1c.streamlit.app/" class="portfolio-head"><i class="fa-solid fa-check"> </i>TO-DO list</a></h5>
                             <small class="para">
-                                A book management application that consists of four fundamental operations:
-                                Create, Read, Update, Delete.
+                                <ul>
+                                    <span class="feature">Streamlit</span>                                                                   
+                                </ul>
                             </small>
                             <div class="container2">
                                 <div class="left-tl-content left-ul">
@@ -226,9 +264,10 @@
                                     </ul>
                                 </div>
                                 <div class="right-tl-content right-ul">
-                                    <h5 class="tl-title " >Matpoltlib Demo</h5>
+                                    <h5 class="tl-title " >Python Demo in YouTube</h5>
                                     <ul>
-                                        <li><a href="https://www.youtube.com/@yeyulchoi6314/playlists" class="portfolio-head">Playlist in YouTube</a></li>
+                                        <li><a href="https://www.youtube.com/@yeyulchoi6314/playlists" class="portfolio-head">Matpoltlib </a></li>
+                                        <li><a href="https://www.youtube.com/@yeyulchoi6314/playlists" class="portfolio-head">Pandas</a></li>
                                     </ul>
                                 </div>
                             </div>    
@@ -246,10 +285,20 @@
                     <div class="right-tl-content">
                         <div class="tl-content">
                             <h5 class="tl-title-2"></h5>
-                            <p class="para courses">
-                                C# | Java | HTML/CSS | Database | Unix/Linux | Software_Requirements_Engineering | 
-                                Software_System_Design | Web_Application_Development | IT_Project_Management | Software_Testing_&_Quality_Assurance 
-                            </p>
+                            <small class="para">
+                                <ul>
+                                    <span class="feature">C# </span>
+                                    <span class="feature">Java</span>
+                                    <span class="feature"> HTML/CSS</span>
+                                    <span class="feature"> Database</span>
+                                    <span class="feature">Unix/Linux</span>                                    
+                                    <span class="feature">Software_Requirements_Engineering</span>
+                                    <span class="feature">Software_System_Design</span>
+                                    <span class="feature">Web_Application_Development</span>
+                                    <span class="feature">IT_Project_Management</span>  
+                                    <span class="feature">Software_Testing_&_Quality_Assurance</span>                                 
+                                </ul>
+                            </small>
                         </div>
                     </div>
                 <!-- </div>     -->
