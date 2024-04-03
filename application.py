@@ -19,9 +19,9 @@ application.config['MAIL_USE_SSL']=True
 application.config['MAIL_USERNAME']='yeyulchoi@gmail.com'  #os.environ.get('FLASK_MAIL_USER_EMAIL')
 application.config['MAIL_PASSWORD']='crlr kkkp wkbx xbpw'  #os.environ.get('FLASK_MAIL_USER_PASSWORD')
 mail = Mail(application)
-# app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///flaskaws.db'
+application.config['SQLALCHEMY_DATABASE_URI']='sqlite:///flaskaws.db'
 
-application.config['SQLALCHEMY_DATABASE_URI']='mysql://root:''@localhost/flask_aws2'
+# application.config['SQLALCHEMY_DATABASE_URI']='mysql://root:''@localhost/flask_aws2'
 application.config['SQLALCHEMY_TRACK_MODIFICATION']=False
 application.config['SECRET_KEY']=secrets.token_hex(16)
 
